@@ -29,10 +29,9 @@ import de.bremen.unloadme.normalform.NormalFormManager;
  * Implementation of the (iterative) version of datalog based module extraction
  * [1] according to [2].
  * {@link DatalogBasedModuleExtractor#extractSingleModule(Set, Optional)}
- * corresponds to the non-iterative version (not applicable for the
- * {@link AtomicDecomposition}), while
+ * corresponds to the non-iterative version, while
  * {@link DatalogBasedModuleExtractor#extract(Stream)} (and overloaded methods)
- * correspond to iterative version that is applicable for the
+ * correspond to iterative version. Neither are applicable for the
  * {@link AtomicDecomposition}.
  *
  * [1] A. A. Romero, M. Kaminski, B. Cuenca Grau und I. Horrocks: Module
@@ -122,7 +121,7 @@ public class DatalogBasedModuleExtractor extends AbstractModuleExtractor {
 
 	/**
 	 * {@inheritDoc} Corresponds to the iterative version of Datalog based Module
-	 * extraction plus Tautology checks (applicable for the
+	 * extraction plus Tautology checks (NOT applicable for the
 	 * {@link AtomicDecomposition}).
 	 *
 	 * @throws IllegalArgumentException if (1) the given signature contains some
