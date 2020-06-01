@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>de.bremen</groupId>
+	<artifactId>UnloadMe</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>UnloadMe</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>11</jdk.version>
+		<rulewerkVersion>0.6.0</rulewerkVersion>
+	</properties>
+
+	<dependencies>
+		<!-- OWL API -->
+		<dependency>
+			<groupId>net.sourceforge.owlapi</groupId>
+			<artifactId>owlapi-distribution</artifactId>
+			<version>5.1.15-SNAPSHOT</version>
+		</dependency>
+		<!-- Rulewerk -->
+		<dependency>
+			<groupId>org.semanticweb.rulewerk</groupId>
+			<artifactId>rulewerk-core</artifactId>
+			<version>${rulewerkVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticweb.rulewerk</groupId>
+			<artifactId>rulewerk-parser</artifactId>
+			<version>${rulewerkVersion}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.semanticweb.rulewerk</groupId>
+			<artifactId>rulewerk-vlog</artifactId>
+			<version>${rulewerkVersion}</version>
+		</dependency>
+		<!-- Apache Commons -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.10</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-collections4</artifactId>
+			<version>4.4</version>
+		</dependency>
+		<!-- Guava -->
+		<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>29.0-jre</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.1</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
